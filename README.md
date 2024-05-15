@@ -4,13 +4,13 @@
 
 
 # <center>Entrega de proyecto final</center>
-@Alumno
+@Santiago Angel Gonzalez Martin
 
-@Comision
+@que se yo
 
-@Tutor
+@yo
 
-@Docente
+@uno de tantos
 
 
 
