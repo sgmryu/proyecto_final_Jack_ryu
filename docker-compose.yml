@@ -11,3 +11,7 @@ services:
       - ./structure:/structure
     ports:
       - "3306:3306"
+
+      #!/bin/bash
+
+MYSQL_PWD="$MYSQL_PASSWORD" mysql -h "$MYSQL_HOSTNAME" -u "$MYSQL_USERNAME" "$MYSQL_DATABASE" "$@"
