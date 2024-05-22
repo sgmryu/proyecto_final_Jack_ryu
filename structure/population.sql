@@ -1,6 +1,7 @@
+-- población de tablas
 use chelas;
 -- Insertar registros en la tabla TipoCerveza
-INSERT INTO TipoCerveza (tipo_id, nombre, estilo, descripcion) VALUES
+INSERT INTO tipocerveza (tipo_id, nombre, estilo, descripcion) VALUES
 (1, 'Pilsner', 'Lager', 'Cerveza de color dorado, con sabor suave y aroma floral.'),
 (2, 'IPA', 'Ale', 'Cerveza de color ámbar, con un fuerte sabor a lúpulo y notas cítricas.'),
 (3, 'Stout', 'Ale', 'Cerveza oscura, con cuerpo completo y notas a café y chocolate.'),
@@ -8,7 +9,7 @@ INSERT INTO TipoCerveza (tipo_id, nombre, estilo, descripcion) VALUES
 (5, 'Saison', 'Ale', 'Cerveza de temporada, con sabor especiado y afrutado.');
 
 -- Insertar registros en la tabla Produccion
-INSERT INTO Produccion (produccion_id, tipo_id, cantidad, fecha) VALUES
+INSERT INTO produccion (produccion_id, tipo_id, cantidad, fecha) VALUES
 (1, 1, 1000, '2024-05-01'),
 (2, 2, 800, '2024-05-02'),
 (3, 3, 600, '2024-05-03'),
@@ -16,7 +17,7 @@ INSERT INTO Produccion (produccion_id, tipo_id, cantidad, fecha) VALUES
 (5, 5, 500, '2024-05-05');
 
 -- Insertar registros en la tabla Ventas
-INSERT INTO Ventas (venta_id, tipo_id, cantidad, ingresos, fecha) VALUES
+INSERT INTO venta (venta_id, tipo_id, cantidad, ingresos, fecha) VALUES
 (1, 1, 800, 2000.00, '2024-05-01'),
 (2, 2, 600, 3000.00, '2024-05-02'),
 (3, 3, 500, 2500.00, '2024-05-03'),
@@ -24,7 +25,7 @@ INSERT INTO Ventas (venta_id, tipo_id, cantidad, ingresos, fecha) VALUES
 (5, 5, 300, 1500.00, '2024-05-05');
 
 -- Insertar registros en la tabla Inventario
-INSERT INTO Inventario (inventario_id, tipo_id, cantidad) VALUES
+INSERT INTO inventario (inventario_id, tipo_id, cantidad) VALUES
 (1, 1, 200),
 (2, 2, 150),
 (3, 3, 100),
@@ -32,7 +33,7 @@ INSERT INTO Inventario (inventario_id, tipo_id, cantidad) VALUES
 (5, 5, 80);
 
 -- Insertar registros en la tabla Pedidos
-INSERT INTO Pedidos (pedido_id, tipo_id, cantidad, fecha_pedido, fecha_entrega) VALUES
+INSERT INTO pedido (pedido_id, tipo_id, cantidad, fecha_pedido, fecha_entrega) VALUES
 (1, 1, 100, '2024-05-01', '2024-05-10'),
 (2, 2, 80, '2024-05-02', '2024-05-09'),
 (3, 3, 70, '2024-05-03', '2024-05-08'),

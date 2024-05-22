@@ -1,3 +1,4 @@
+-- dcl con roles
 -- Crear el rol con todos los permisos para chelas.*
 CREATE ROLE full_access_role;
 
