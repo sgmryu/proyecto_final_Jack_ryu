@@ -1,7 +1,6 @@
 USE chelas;
-
 DELIMITER //
-CREATE FUNCTION totalingresosportipo(tipo_id INT) 
+CREATE FUNCTION IF NOT EXISTS totalingresosportipo(tipo_id INT) 
 RETURNS DECIMAL(10, 2)
 BEGIN
     DECLARE total DECIMAL(10, 2);
@@ -11,7 +10,7 @@ END //
 DELIMITER ;
 
 DELIMITER //
-CREATE FUNCTION totalproduccionportipo(tipo_id INT) 
+CREATE FUNCTION IF NOT EXISTS totalproduccionportipo(tipo_id INT) 
 RETURNS INT
 BEGIN
     DECLARE total INT;

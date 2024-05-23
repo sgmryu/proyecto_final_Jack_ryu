@@ -1,11 +1,11 @@
 USE chelas;
-CREATE TRIGGER actualizarinventarioventa 
+CREATE TRIGGER IF NOT EXISTS actualizarinventarioventa 
 AFTER INSERT ON Ventas
 FOR EACH ROW
 CALL actualizarinventariodespuesventa(NEW.venta_id);
 
 DELIMITER //
-CREATE TRIGGER verificardisponibilidadpedido 
+CREATE TRIGGER IF NOT EXISTS verificardisponibilidadpedido 
 BEFORE INSERT ON Pedidos
 FOR EACH ROW
 BEGIN

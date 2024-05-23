@@ -1,6 +1,6 @@
 USE chelas;
 DELIMITER //
-CREATE PROCEDURE actualizarinventariodespuesventa(venta_id INT)
+CREATE PROCEDURE IF NOT EXISTS actualizarinventariodespuesventa(venta_id INT)
 BEGIN
     DECLARE tipo_id INT;
     DECLARE cantidad INT;
@@ -10,7 +10,7 @@ END //
 DELIMITER ;
 
 DELIMITER //
-CREATE PROCEDURE registrarpedido(tipo_id INT, cantidad INT, fecha_pedido DATE, fecha_entrega DATE)
+CREATE PROCEDURE IF NOT EXISTS registrarpedido(tipo_id INT, cantidad INT, fecha_pedido DATE, fecha_entrega DATE)
 BEGIN
     INSERT INTO pedido (tipo_id, cantidad, fecha_pedido, fecha_entrega) VALUES (tipo_id, cantidad, fecha_pedido, fecha_entrega);
 END //
