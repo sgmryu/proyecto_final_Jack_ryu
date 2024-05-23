@@ -5,7 +5,7 @@ services:
     container_name: mysql
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: $ROOT_PASSWORD
     volumes:
       - ./objects:/objects
       - ./structure:/structure
