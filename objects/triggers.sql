@@ -1,15 +1,12 @@
--- disparadores
-use chelas;
-
--- Trigger 1: Después de la inserción de una venta, actualizar el inventario
-CREATE TRIGGER actualizarinventarioventa AFTER INSERT ON Ventas
+USE chelas;
+CREATE TRIGGER actualizarinventarioventa 
+AFTER INSERT ON Ventas
 FOR EACH ROW
-    CALL actualizarinventariodespuesventa(NEW.venta_id);
+CALL actualizarinventariodespuesventa(NEW.venta_id);
 
-
--- Trigger 2: Antes de la inserción de un pedido, verificar la disponibilidad en el inventario
 DELIMITER //
-CREATE TRIGGER verificardisponibilidadpedido BEFORE INSERT ON Pedidos
+CREATE TRIGGER verificardisponibilidadpedido 
+BEFORE INSERT ON Pedidos
 FOR EACH ROW
 BEGIN
     DECLARE disponible INT;

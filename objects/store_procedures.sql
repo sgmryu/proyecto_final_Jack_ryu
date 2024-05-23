@@ -1,7 +1,4 @@
--- procedimientos almacenados
-use chelas;
-
--- Procedimiento 1: Actualizar el inventario después de una venta
+USE chelas;
 DELIMITER //
 CREATE PROCEDURE actualizarinventariodespuesventa(venta_id INT)
 BEGIN
@@ -11,7 +8,7 @@ BEGIN
     UPDATE inventario SET cantidad = cantidad - cantidad WHERE tipo_id = tipo_id;
 END //
 DELIMITER ;
--- Procedimiento 2: Registrar un nuevo pedido
+
 DELIMITER //
 CREATE PROCEDURE registrarpedido(tipo_id INT, cantidad INT, fecha_pedido DATE, fecha_entrega DATE)
 BEGIN
