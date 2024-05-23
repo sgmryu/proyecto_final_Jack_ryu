@@ -1,19 +1,19 @@
 USE chelas;
 -- dcl con roles
 -- Crear el rol con todos los permisos para chelas.*
-CREATE ROLE full_access_role;
+CREATE ROLE acceso_total;
 -- Crear el rol con permisos de select e insert para chelas.*
-CREATE ROLE limited_access_role;
-GRANT ALL PRIVILEGES ON chelas.* TO full_access_role;
-GRANT SELECT, INSERT ON chelas.* TO limited_access_role;
+CREATE ROLE acceso_limitado;
+GRANT ALL PRIVILEGES ON chelas.* TO acceso_total;
+GRANT SELECT, INSERT ON chelas.* TO acceso_limitado;
 
 -- Crear el primer usuario y asignarle el rol con todos los permisos
-CREATE USER 'user1'@'localhost' IDENTIFIED BY 'password1';
-GRANT full_access_role TO 'user1'@'localhost';
+CREATE USER 'dev'@'%' IDENTIFIED BY '123456';
+GRANT acceso_total TO 'dev'@'%';
 
 -- Crear el segundo usuario y asignarle el rol con permisos limitados
-CREATE USER 'user2'@'localhost' IDENTIFIED BY 'password2';
-GRANT limited_access_role TO 'user2'@'localhost';
+CREATE USER 'consultor'@'%' IDENTIFIED BY '123456';
+GRANT acceso_limitado TO 'consultor'@'%';
 
 
 
