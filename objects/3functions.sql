@@ -1,7 +1,7 @@
 -- funciones
 use chelas;
 
--- Función 1: Calcular el total de ingresos por tipo de cerveza
+-- 1: Calcular el total de ingresos por tipo de cerveza
 DELIMITER //
 CREATE FUNCTION totalingresosportipo(tipo_id INT) RETURNS DECIMAL(10, 2)
 BEGIN
@@ -11,7 +11,7 @@ BEGIN
 END //
 DELIMITER ;
 
--- Función 2: Calcular el total de producción por tipo de cerveza
+-- 2: Calcular el total de producción por tipo de cerveza
 DELIMITER //
 CREATE FUNCTION totalproduccionportipo(tipo_id INT) RETURNS INT
 BEGIN
